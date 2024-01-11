@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "l2serial",
+	"version": "${version}",
+	"name": "L2Serial",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/l2serial/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.xkmc.l2serial.L2Serial"
+		],
+		"client": [
+			"dev.xkmc.l2serial.L2SerialClient"
+		]
+	},
+	"mixins": [
+		"l2serial.mixins.json",
+		{
+			"config": "l2serial.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.2",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
